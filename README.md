@@ -1,6 +1,6 @@
 # CoursNetX - Application Décentralisée d'Archivage de Cours
 
-## 📖 À propos du projet
+## À propos du projet
 
 **CoursNetX** est une application décentralisée (dApp) développée dans le cadre de mon Projet de Fin d'Études pour la Licence en Ingénierie Logicielle à la FST d'Errachidia (noté **17/20**).
 
@@ -8,7 +8,7 @@ Ce projet explore le potentiel des technologies du **Web3** pour créer une plat
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 Ce projet a été construit avec les technologies suivantes :
 
@@ -28,17 +28,17 @@ Ce projet a été construit avec les technologies suivantes :
 
 ---
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-* 🔐 **Authentification décentralisée** via le portefeuille MetaMask.
-* 👤 **Gestion des rôles** (Administrateur, Enseignant, Étudiant) directement inscrite sur la blockchain.
-* 📤 **Dépôt de cours sécurisé :** Les fichiers sont stockés sur IPFS, et seul leur hash (empreinte numérique) est enregistré sur la blockchain, garantissant l'intégrité et la permanence des données.
-* 🔍 **Consultation des cours** avec un système de droits d'accès géré par le smart contract.
-* 📜 **Historique transparent :** Toutes les actions importantes (dépôt d'un cours, création d'une filière...) sont enregistrées comme des transactions publiquement vérifiables sur la blockchain.
+* **Authentification décentralisée** via le portefeuille MetaMask.
+* **Gestion des rôles** (Administrateur, Enseignant, Étudiant) directement inscrite sur la blockchain.
+* **Dépôt de cours sécurisé :** Les fichiers sont stockés sur IPFS, et seul leur hash (empreinte numérique) est enregistré sur la blockchain, garantissant l'intégrité et la permanence des données.
+* **Consultation des cours** avec un système de droits d'accès géré par le smart contract.
+* **Historique transparent :** Toutes les actions importantes (dépôt d'un cours, création d'une filière...) sont enregistrées comme des transactions publiquement vérifiables sur la blockchain.
 
 ---
 
-## 🚀 Installation et Lancement
+## Installation et Lancement
 
 Pour lancer ce projet en local, suivez les étapes ci-dessous.
 
