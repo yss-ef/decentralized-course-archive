@@ -1,84 +1,106 @@
-# CoursNetX - Application Décentralisée d'Archivage de Cours
+# 🎓 CoursNetX | Decentralized Course Archive dApp
 
-## À propos du projet
+> **Final Graduation Project (PFE) - Software Engineering | Grade: 17/20**
+> **CoursNetX** is a Decentralized Application (dApp) developed at FST Errachidia. It leverages **Web3** technologies to create a secure, transparent, and censorship-resistant pedagogical resource archiving platform. Unlike traditional centralized systems, it gives data control back to users using the Ethereum blockchain and the IPFS distributed storage system.
 
-**CoursNetX** est une application décentralisée (dApp) développée dans le cadre de mon Projet de Fin d'Études pour la Licence en Ingénierie Logicielle à la FST d'Errachidia (noté **17/20**).
+## 📑 Table of Contents
 
-Ce projet explore le potentiel des technologies du **Web3** pour créer une plateforme d'archivage de ressources pédagogiques qui soit **sécurisée, transparente et résistante à la censure**. Contrairement aux systèmes centralisés traditionnels, CoursNetX redonne le contrôle des données aux utilisateurs en s'appuyant sur la blockchain Ethereum et le système de stockage décentralisé IPFS.
+* [Architecture Overview](https://www.google.com/search?q=%23%EF%B8%8F-architecture-overview)
+* [Technology Stack](https://www.google.com/search?q=%23%EF%B8%8F-technology-stack)
+* [Key Features](https://www.google.com/search?q=%23-key-features)
+* [Installation & Setup](https://www.google.com/search?q=%23-installation--setup)
+* [Project Background](https://www.google.com/search?q=%23-project-background)
+
+## 🏗️ Architecture Overview
+
+CoursNetX follows the standard dApp architecture:
+
+1. **Frontend**: User interface built with React.js.
+2. **Provider/Signer**: MetaMask handles authentication and signs transactions.
+3. **Smart Contract**: Logic and access control reside on the Ethereum blockchain.
+4. **Off-chain Storage**: Large files are stored on **IPFS**, while only the immutable **Content Identifier (CID/Hash)** is recorded on-chain.
+
+## 🛠️ Technology Stack
+
+| Layer | Technology | Purpose |
+| --- | --- | --- |
+| **Frontend** | React.js | UI building and state management. |
+| **Blockchain Bridge** | Web3.js | Communication between the frontend and Ethereum. |
+| **Smart Contract** | Solidity | Developing secure on-chain business logic. |
+| **Network** | Ethereum / Ganache | Blockchain deployment and local testing. |
+| **Storage** | IPFS & Pinata | Decentralized, immutable file storage. |
+| **Dev Framework** | Truffle Suite | Compilation, migration, and testing. |
+
+## ✨ Key Features
+
+* **Decentralized Authentication**: Secure login via **MetaMask** wallet—no passwords needed.
+* **On-Chain Role Management**: Roles (Admin, Teacher, Student) are immutably written on the blockchain.
+* **Secure File Handling**: Files are uploaded to **IPFS**. The smart contract stores the digital fingerprint (hash), ensuring data integrity and permanence.
+* **Transparent History**: Every critical action (uploading a course, creating a department) is recorded as a publicly verifiable transaction.
+* **Access Control**: Proprietary logic within the Solidity smart contract manages view and download permissions.
+
+## 🚀 Installation & Setup
+
+### Prerequisites (Fedora 43)
+
+Ensure your environment is ready for Web3 development:
+
+```bash
+# Install Node.js
+sudo dnf install nodejs npm
+
+# Install Truffle and Ganache CLI globally
+npm install -g truffle ganache
+
+```
+
+### Setup Steps
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/yss-ef/[REPO-NAME].git
+cd [REPO-NAME]
+
+```
+
+**2. Install dependencies**
+
+```bash
+npm install
+
+```
+
+**3. Configure Development Environment**
+
+* Launch **Ganache** to start a local blockchain.
+* Configure **MetaMask** to connect to the Ganache RPC (usually `http://127.0.0.1:7545`).
+* Import one of the private keys from Ganache into MetaMask.
+
+**4. Deploy the Smart Contract**
+
+```bash
+truffle migrate --reset
+
+```
+
+**5. Launch the Frontend**
+
+```bash
+npm start
+
+```
+
+The dApp will be accessible at `http://localhost:3000`.
 
 ---
 
-## Technologies utilisées
+## 🎓 Project Background
 
-Ce projet a été construit avec les technologies suivantes :
-
-* **Frontend :**
-    * [**React.js**](https://reactjs.org/) : Bibliothèque JavaScript pour construire l'interface utilisateur.
-    * [**Web3.js**](https://web3js.readthedocs.io/) : Pour la communication entre l'application et la blockchain Ethereum.
-    * [**MetaMask**](https://metamask.io/) : Utilisé comme portefeuille pour l'authentification et la signature des transactions.
-* **Backend (Smart Contract) :**
-    * [**Solidity**](https://soliditylang.org/) : Langage de programmation pour écrire le contrat intelligent.
-    * [**Ethereum**](https://ethereum.org/) : La blockchain sur laquelle le contrat est déployé.
-* **Stockage :**
-    * [**IPFS (InterPlanetary File System)**](https://ipfs.io/) : Pour le stockage distribué et immuable des fichiers de cours.
-    * [**Pinata**](https://www.pinata.cloud/) : Service pour faciliter l'ancrage des fichiers sur IPFS.
-* **Environnement de développement :**
-    * [**Truffle Suite**](https://www.trufflesuite.com/) : Framework de développement pour la compilation, le déploiement et le test des smart contracts.
-    * [**Ganache**](https://www.trufflesuite.com/ganache) : Blockchain locale pour le développement et les tests.
+This project represents the culmination of my Software Engineering license at **FST Errachidia**. It explores the transition from Web2 centralized archives to Web3 paradigms, focusing on data sovereignty and immutable academic records.
 
 ---
 
-## Fonctionnalités
+*Authored by Youssef Fellah.*
 
-* **Authentification décentralisée** via le portefeuille MetaMask.
-* **Gestion des rôles** (Administrateur, Enseignant, Étudiant) directement inscrite sur la blockchain.
-* **Dépôt de cours sécurisé :** Les fichiers sont stockés sur IPFS, et seul leur hash (empreinte numérique) est enregistré sur la blockchain, garantissant l'intégrité et la permanence des données.
-* **Consultation des cours** avec un système de droits d'accès géré par le smart contract.
-* **Historique transparent :** Toutes les actions importantes (dépôt d'un cours, création d'une filière...) sont enregistrées comme des transactions publiquement vérifiables sur la blockchain.
-
----
-
-## Installation et Lancement
-
-Pour lancer ce projet en local, suivez les étapes ci-dessous.
-
-### Prérequis
-
-* Node.js (version 16 ou supérieure)
-* Un portefeuille MetaMask installé sur votre navigateur
-* Truffle et Ganache installés globalement :
-    ```bash
-    npm install -g truffle ganache
-    ```
-
-### Étapes d'installation
-
-1.  **Clonez le dépôt :**
-    ```bash
-    git clone [https://github.com/yss-ef/NOM-DE-TON-DEPOT.git](https://github.com/yss-ef/NOM-DE-TON-DEPOT.git)
-    cd NOM-DE-TON-DEPOT
-    ```
-
-2.  **Installez les dépendances (côté client) :**
-    ```bash
-    # Si ton projet a un dossier client/frontend, navigue dedans
-    # cd client
-    npm install
-    ```
-
-3.  **Configurez l'environnement :**
-    * Lancez **Ganache** pour démarrer une blockchain locale.
-    * Configurez MetaMask pour se connecter au réseau local Ganache.
-    * Importez un ou plusieurs comptes de Ganache dans MetaMask.
-
-4.  **Déployez le Smart Contract :**
-    ```bash
-    truffle migrate --reset
-    ```
-
-5.  **Lancez l'application React :**
-    ```bash
-    npm start
-    ```
-
-L'application devrait maintenant être accessible sur `http://localhost:3000`.
+*Developed as part of the License in Software Engineering - FST Errachidia.*
