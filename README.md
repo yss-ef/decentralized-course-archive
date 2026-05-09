@@ -79,7 +79,5 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
     ```
 
 ---
-
 *Authored by Youssef Fellah.*
-
 *Developed for the Graduation Project (PFE) - FST Errachidia.*
