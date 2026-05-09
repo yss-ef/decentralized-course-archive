@@ -78,6 +78,5 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
     npm start
     ```
 
----
-*Authored by Youssef Fellah.*
-*Developed for the Graduation Project (PFE) - FST Errachidia.*
+Authored by Youssef Fellah.  
+Developed for the Graduation Project (PFE) - FST Errachidia.
