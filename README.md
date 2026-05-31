@@ -1,46 +1,62 @@
-# Decentralized Course Archive: Web3 Academic Resource Management
+# Decentralized course archive: Web3 academic resource management
 
-A high-performance Decentralized Application (dApp) engineered to provide secure, transparent, and censorship-resistant archiving of pedagogical resources. This project leverages the Ethereum blockchain and IPFS to ensure data sovereignty and immutable academic records.
+Bottom Line Up Front: This project provides a high-performance Decentralized
+Application (dApp) engineered for secure, transparent, and censorship-resistant
+archiving of pedagogical resources. It leverages the Ethereum blockchain and
+IPFS to ensure data sovereignty and immutable academic records.
 
-## Technical Architecture
+## Technical architecture
 
-The application implements a standard Web3 three-tier architecture, ensuring total decentralization of both logic and storage:
+The application implements a standard Web3 three-tier architecture, ensuring
+total decentralization of both logic and storage:
 
-1.  **On-Chain Logic**: **Solidity** smart contracts managing access control, role-based permissions (RBAC), and metadata persistence.
-2.  **Distributed Storage**: Integration with **IPFS** for off-chain file persistence, utilizing content-addressing (CID) to ensure data integrity.
-3.  **Frontend Interface**: A **React.js** single-page application utilizing **Web3.js** for blockchain state orchestration and provider synchronization.
+1.  **On-chain logic**: Solidity smart contracts managing access control,
+    role-based permissions (RBAC), and metadata persistence.
+2.  **Distributed storage**: Integration with IPFS for off-chain file
+    persistence, utilizing content-addressing (CID) to ensure data integrity.
+3.  **Frontend interface**: A React.js single-page application utilizing
+    Web3.js for blockchain state orchestration and provider synchronization.
 
 ---
 
-## Technical Stack
+## Technical stack
 
-*   **Smart Contracts**: Solidity ^0.8.x
-*   **Development Framework**: Truffle Suite
-*   **Blockchain Bridge**: Web3.js
-*   **Distributed Storage**: IPFS (Infura/Pinata Gateways)
+*   **Smart contracts**: Solidity ^0.8.x
+*   **Development framework**: Truffle Suite
+*   **Blockchain bridge**: Web3.js
+*   **Distributed storage**: IPFS (Infura/Pinata Gateways)
 *   **Frontend**: React.js / SCSS
-*   **Wallet Integration**: MetaMask (EIP-1193 Provider)
-*   **Local Network**: Ganache CLI
+*   **Wallet integration**: MetaMask (EIP-1193 Provider)
+*   **Local network**: Ganache CLI
 
 ---
 
-## Core Implementations
+## Core implementations
 
-### 1. Decentralized Identity & RBAC
-*   **Wallet-Based Authentication**: Leverages asymmetric cryptography via MetaMask for secure, password-less entry.
-*   **On-Chain Access Control**: Implements granular Role-Based Access Control (Admin, Teacher, Student) within the smart contract to govern file interactions and administrative actions.
+### 1. Decentralized identity and RBAC
+*   **Wallet-based authentication**: Leverages asymmetric cryptography via
+    MetaMask for secure, password-less entry.
+*   **On-chain access control**: Implements granular Role-Based Access Control
+    (Admin, Teacher, Student) within the smart contract to govern file
+    interactions and administrative actions.
 
-### 2. Immutable Content Archiving
-*   **Hybrid Storage Model**: Combines on-chain metadata (Ethereum) with off-chain content (IPFS) to optimize gas costs while maintaining decentralization.
-*   **Integrity Verification**: Automated mapping of IPFS Content Identifiers (CIDs) to on-chain records, ensuring that archived materials cannot be altered or removed without a verifiable transaction.
+### 2. Immutable content archiving
+*   **Hybrid storage model**: Combines on-chain metadata (Ethereum) with
+    off-chain content (IPFS) to optimize gas costs while maintaining
+    decentralization.
+*   **Integrity verification**: Automated mapping of IPFS Content Identifiers
+    (CIDs) to on-chain records, ensuring that archived materials cannot be
+    altered or removed without a verifiable transaction.
 
-### 3. Transparent Governance
-*   **Event Orchestration**: Emitting Solidity events for critical operations to provide a verifiable audit trail of academic resource lifecycles.
-*   **Transactional Transparency**: Every modification to the archive is recorded as a publicly verifiable state transition on the Ethereum network.
+### 3. Transparent governance
+*   **Event orchestration**: Emitting Solidity events for critical operations to
+    provide a verifiable audit trail of academic resource lifecycles.
+*   **Transactional transparency**: Every modification to the archive is recorded
+    as a publicly verifiable state transition on the Ethereum network.
 
 ---
 
-## Project Structure
+## Project structure
 
 ```text
 ├── course-archive/          # Solidity source & Truffle migrations
@@ -51,7 +67,7 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
 
 ---
 
-## Deployment & Setup
+## Deployment and setup
 
 ### Prerequisites
 *   Node.js 18+
@@ -59,7 +75,7 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
 *   MetaMask Browser Extension
 *   Ganache (Local Blockchain)
 
-### 1. Smart Contract Deployment
+### 1. Smart contract deployment
 1.  Initialize local blockchain (Ganache).
 2.  Navigate to the contract directory:
     ```bash
@@ -67,7 +83,7 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
     truffle migrate --reset
     ```
 
-### 2. Frontend Initialization
+### 2. Frontend initialization
 1.  Install dependencies:
     ```bash
     cd course-archive-frontend
@@ -78,5 +94,5 @@ The application implements a standard Web3 three-tier architecture, ensuring tot
     npm start
     ```
 
-Authored by Youssef Fellah.  
+Authored by Youssef Fellah.
 Developed for the Graduation Project (PFE) - FST Errachidia.
